@@ -25,6 +25,24 @@ function eraseCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
+function isCookieEneble(name) {
+  var retVal = false;
+    // Quick test if browser has cookieEnabled host property
+  if (navigator.cookieEnabled) { retVal = true };
+  // Create cookie
+  // document.cookie = "cookietest=1";
+  if ( retVal == false ) {
+      setCookie(name,1,1);
+      var retVal = document.cookie.indexOf(name) != -1;
+      // Delete cookie
+      // document.cookie = "cookietest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT";
+      eraseCookie(name);
+  }
+  console.log(retVal);
+  return retVal;
+}
+
+
 function createPointSqare(x,y) {
     // <svg width="400" height="110">
     // <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
