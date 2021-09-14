@@ -28,7 +28,7 @@ function eraseCookie(name) {
 function isCookieEneble(name) {
   var retVal = false;
     // Quick test if browser has cookieEnabled host property
-  if (navigator.cookieEnabled) { retVal = true };
+  //if (navigator.cookieEnabled) { retVal = true };
   // Create cookie
   // document.cookie = "cookietest=1";
   if ( retVal == false ) {
