@@ -42,7 +42,7 @@ window.addEventListener('load', function () {
       console.log(retVal);
       return retVal;
     }
-}
+});
 
 function createPointSqare(x,y) {
     // <svg width="400" height="110">
