@@ -1,1 +1,5 @@
-console.log('test - A!');
+"use strict";
+
+$(function() {
+    console.log('ready! A');
+})
